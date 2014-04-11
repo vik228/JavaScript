@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<script type="text/javascript">
+function replaceString(sourceString, patternToFind, strReplacement) {
+	var result = sourceString.replace(patternToFind,strReplacement);
+	document.getElementById('sourceText').innerHTML = result;
+}
+
+function replaceWithFunction(sourceString, patternToFind) {
+	var result = sourceString.replace(patternToFind,function() {
+		return "JavaScript"+gCount++;
+	});
+	document.getElementById('sourceText').innerHTML = result;
+}
+
+function doReplacement() {
+	replaceString(document.getElementById('sourceText').innerHTML,/javascript/gi,"JavaScript");
+	replaceWithFunction(document.getElementById('sourceText').innerHTML,/javascript/gi,"JavaScript");
+}
+
+var gCount=0;
+window.onload = function() {
+	document.getElementById('btnFind').onclick = doReplacement;
+}
+</script>
+</head>
+
+<body>
+
+	<h1>Using the replace() function to manipulate text</h1>
+
+	<p id="sourceText">I really like Javascript. It&#39;s a fun, versatile language to program in. 
+	In fact, I&#39;d have to say that javaScript is probably my all-time favorite 
+	programming language. I think that everyone should learn how to program in 
+	javascript!</p>
+
+	<form method="post">
+		<input name="Button1" type="button" value="Replace" id="btnFind"/></form>
+
+</body>
+
+</html>

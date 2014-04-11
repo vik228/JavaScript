@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Untitled 1</title>
+
+    <script type="text/javascript" src = "script.js">
+        
+    </script>
+
+</head>
+<body>
+    <h1>
+        Using the match() function</h1>
+    <p id="sourceText">
+        To get in touch with me, try calling me at 555-1212. If that doesn&#39;t work, try
+        calling my cell phone at 555-1234. Finally, try faxing me at 555-6789. Otherwise,
+        just send me an email.</p>
+    <form method="post">
+    <input name="Button1" type="button" value="Global Match" id="btnMatchGlobal" />
+    <input name="Button2" type="button" value="Non-Global Match" id="btnMatchNonGlobal" /></form>
+</body>
+</html>
